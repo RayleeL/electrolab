@@ -1601,3 +1601,367 @@ section {
   max-width: 100%;
   overflow-x: clip;
 }
+
+/* =========================
+   FINAL LAYOUT FIX
+   вставить в конец CSS
+   ========================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+}
+
+.header,
+.section,
+.hero,
+main {
+  overflow-x: clip;
+}
+
+/* Базовая ширина контента как у аккуратного лендинга */
+.container,
+.header__container,
+.hero__container {
+  width: min(1240px, calc(100% - 64px));
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Общие секции */
+.section {
+  padding: 128px 0;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  height: 92px;
+}
+
+.header--scrolled .header__container {
+  height: 76px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+
+.logo-main {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.nav {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 3vw, 52px);
+  flex-wrap: nowrap;
+}
+
+.nav__link {
+  white-space: nowrap;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 0 0 auto;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  min-height: 100svh;
+  padding: 132px 0 88px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(36px, 4vw, 56px);
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 680px;
+  min-width: 0;
+  align-self: center;
+}
+
+.eyebrow {
+  margin-bottom: 22px;
+}
+
+.hero__title {
+  font-size: clamp(46px, 5.8vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  margin-bottom: 28px;
+  max-width: 680px;
+}
+
+.hero__desc {
+  font-size: clamp(18px, 1.7vw, 22px);
+  line-height: 1.55;
+  margin-bottom: 40px;
+  max-width: 620px;
+}
+
+.hero__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 52px;
+}
+
+.hero__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.metric-item {
+  min-width: 140px;
+}
+
+.metric-val {
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1;
+}
+
+.metric-txt {
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* ---------- HERO IMAGE ---------- */
+
+.image-container--hero {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 4 / 5;
+  min-height: 0;
+  height: auto;
+  margin-left: auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.08);
+}
+
+.image-container--hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- GLOWS ---------- */
+
+.hero__glow {
+  width: 720px;
+  height: 720px;
+  filter: blur(120px);
+}
+
+.hero__glow--lilac {
+  top: -220px;
+  right: -180px;
+}
+
+.hero__glow--cyan {
+  bottom: -220px;
+  left: -180px;
+}
+
+/* ---------- ROADMAP ---------- */
+
+.roadmap {
+  width: min(1080px, calc(100% - 32px));
+  max-width: none;
+  margin: 72px auto 0;
+  padding: 0;
+}
+
+.roadmap__grid {
+  gap: 64px;
+}
+
+.roadmap__item {
+  gap: 48px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+  min-height: 56px;
+  padding: 16px 34px;
+}
+
+/* ---------- LARGE DESKTOP ---------- */
+
+@media (min-width: 1600px) {
+  .container,
+  .header__container,
+  .hero__container {
+    width: min(1320px, calc(100% - 96px));
+  }
+
+  .hero__title {
+    font-size: clamp(52px, 5vw, 78px);
+  }
+
+  .image-container--hero {
+    max-width: 600px;
+  }
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1280px) {
+  .container,
+  .header__container,
+  .hero__container {
+    width: min(1180px, calc(100% - 48px));
+  }
+
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__desc {
+    max-width: 760px;
+  }
+
+  .image-container--hero {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .hero__metrics {
+    gap: 24px;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 920px) {
+  .container,
+  .header__container,
+  .hero__container {
+    width: calc(100% - 32px);
+  }
+
+  .header__container {
+    height: 82px;
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 116px 0 72px;
+  }
+
+  .hero__title {
+    font-size: clamp(38px, 10vw, 54px);
+    line-height: 1;
+  }
+
+  .hero__desc {
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+
+  .hero__btns {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 40px;
+  }
+
+  .hero__btns .btn {
+    width: 100%;
+  }
+
+  .hero__metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .image-container--hero {
+    max-width: 100%;
+    aspect-ratio: 4 / 4.7;
+  }
+
+  .roadmap {
+    width: 100%;
+  }
+
+  .roadmap__grid {
+    gap: 48px;
+  }
+
+  .roadmap__item,
+  .roadmap__item:nth-child(even) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 640px) {
+  .section {
+    padding: 88px 0;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 20px;
+  }
+
+  .hero__metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-val {
+    font-size: 32px;
+  }
+}
