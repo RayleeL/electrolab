@@ -35,6 +35,7 @@
     --section-padding: 160px;
     --gap-xl: 100px;
     --gap-lg: 48px;
+   --container: 1200px;
     
     /* Radius */
     --radius-md: 12px;
