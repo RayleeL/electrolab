@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTROLAB — Комплексный консалтинг и оптимизация бизнеса</title>
+    <meta name="description" content="Стратегический консалтинг, диагностика бизнеса и оптимизация процессов. Помогаем владельцам принимать верные решения и повышать эффективность.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ELECTROLAB — Консалтинг для бизнеса">
+    <meta property="og:description" content="Стратегия, оптимизация и сопровождение бизнеса на всех этапах развития.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="./assets/electrolab_favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="logo-area">
+                <a href="#hero" class="brand" aria-label="ELECTROLAB — перейти к началу страницы">
+                  <img src="./assets/electrolab_favicon.png" alt="ELECTROLAB logo - strategic consulting and business optimization company" class="brand__logo" />
+                  <span class="brand__name">ELECTROLAB</span> 
+              </a>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link" data-i18n="nav_about">О компании</a></li>
+                    <li><a href="#services" class="nav__link" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="#process" class="nav__link" data-i18n="nav_process">Процесс</a></li>
+                    <li><a href="#results" class="nav__link" data-i18n="nav_results">Результаты</a></li>
+                    <li><a href="#scenarios" class="nav__link" data-i18n="nav_scenarios">Применение</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Switch Language">
+                    <span class="lang-text">EN</span>
+                </button>
+                <a href="#contact" class="btn btn--primary btn--small hide-mobile" data-i18n="cta_header">Оставить заявку</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero", id="hero">
+            <div class="hero__glow hero__glow--lilac"></div>
+            <div class="hero__glow hero__glow--cyan"></div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="eyebrow fade-in" data-i18n="hero_eyebrow">Стратегический консалтинг • Оптимизация • Рост</span>
+                    <h1 class="hero__title fade-in" data-i18n="hero_title">Помогаем бизнесу расти эффективно и осознанно</h1>
+                    <p class="hero__desc fade-in" data-i18n="hero_desc">Комплексный консалтинг, диагностика процессов и стратегическое сопровождение. Мы помогаем владельцам принимать верные решения и снижать издержки на всех этапах развития.</p>
+                    <div class="hero__btns fade-in">
+                        <a href="#contact" class="btn btn--primary" data-i18n="hero_cta_primary">Получить консультацию</a>
+                        <a href="#services" class="btn btn--outline" data-i18n="hero_cta_secondary">Наши услуги</a>
+                    </div>
+                    
+                    <div class="hero__metrics fade-in">
+                        <div class="metric-item">
+                            <span class="metric-val">15+</span>
+                            <span class="metric-txt" data-i18n="metric_years">лет экспертизы</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-val">200+</span>
+                            <span class="metric-txt" data-i18n="metric_projects">проектов</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-val">30%</span>
+                            <span class="metric-txt" data-i18n="metric_reduction">среднее снижение издержек</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero__visual fade-in">
+                    <div class="image-container image-container--hero">
+                        <img src="./assets/hero.png" alt="Стратегический консалтинг" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Path to Order) -->
+        <section id="about" class="section about relative overflow-hidden">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title fade-in" data-i18n="about_title">Путь к системному порядку</h2>
+                    <p class="section-subtitle fade-in" data-i18n="about_subtitle">Мы превращаем управленческий хаос в четко работающий механизм</p>
+                </div>
+
+                <div class="roadmap">
+                    <div class="roadmap__line">
+                        <div class="roadmap__progress"></div>
+                    </div>
+                    
+                    <div class="roadmap__grid">
+                        <!-- Step 1: Chaos -->
+                        <div class="roadmap__item fade-in">
+                            <div class="roadmap__dot"></div>
+                            <div class="roadmap__content">
+                                <span class="roadmap__status status--chaos" data-i18n="about_step1_status">Точка А: Хаос</span>
+                                <h3 class="roadmap__title" data-i18n="about_step1_title">Неопределенность</h3>
+                                <ul class="roadmap__list">
+                                    <li data-i18n="about_step1_item1">Непрозрачные процессы</li>
+                                    <li data-i18n="about_step1_item2">Зависимость от «незаменимых» сотрудников</li>
+                                    <li data-i18n="about_step1_item3">Принятие решений по интуиции</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Intervention -->
+                        <div class="roadmap__item fade-in">
+                            <div class="roadmap__dot"></div>
+                            <div class="roadmap__content">
+                                <span class="roadmap__status status--intervention" data-i18n="about_step2_status">Инструменты ELECTROLAB</span>
+                                <h3 class="roadmap__title" data-i18n="about_step2_title">Трансформация</h3>
+                                <ul class="roadmap__list">
+                                    <li data-i18n="about_step2_item1">Глубокий аудит и оцифровка</li>
+                                    <li data-i18n="about_step2_item2">Внедрение регламентов и KPI</li>
+                                    <li data-i18n="about_step2_item3">Автоматизация рутинных задач</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Order -->
+                        <div class="roadmap__item fade-in">
+                            <div class="roadmap__dot"></div>
+                            <div class="roadmap__content">
+                                <span class="roadmap__status status--order" data-i18n="about_step3_status">Точка Б: Система</span>
+                                <h3 class="roadmap__title" data-i18n="about_step3_title">Управляемый рост</h3>
+                                <ul class="roadmap__list">
+                                    <li data-i18n="about_step3_item1">Прозрачность каждого процесса</li>
+                                    <li data-i18n="about_step3_item2">Масштабируемая бизнес-модель</li>
+                                    <li data-i18n="about_step3_item3">Решения на основе точных данных</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <!-- Services Section -->
+        <section id="services" class="section services bg-surface relative overflow-hidden">
+            <div class="section__glow section__glow--top-right"></div>
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title fade-in" data-i18n="services_title">Наши услуги</h2>
+                    <p class="section-subtitle fade-in" data-i18n="services_subtitle">Профессиональная поддержка для решения управленческих и операционных задач</p>
+                </div>
+                
+                <div class="services__bento">
+                    <!-- Service 1 (Large) -->
+                    <div class="service-card service-card--large fade-in">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title" data-i18n="service1_title">Диагностика и оптимизация</h3>
+                            <p class="service-card__desc" data-i18n="service1_desc">Глубокий аудит текущего состояния бизнеса, выявление узких мест и разработка плана по улучшению процессов.</p>
+                            <ul class="service-card__list">
+                                <li data-i18n="service1_item1">Аудит бизнес-процессов</li>
+                                <li data-i18n="service1_item2">Поиск скрытых потерь</li>
+                                <li data-i18n="service1_item3">Реинжиниринг операций</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="services__bento-stack">
+                        <!-- Service 2 -->
+                        <div class="service-card service-card--small fade-in">
+                            <div class="service-card__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <h3 class="service-card__title" data-i18n="service2_title">Стратегический менеджмент</h3>
+                            <p class="service-card__desc" data-i18n="service2_desc">Разработка долгосрочных стратегий развития и KPI систем.</p>
+                        </div>
+                        
+                        <!-- Service 3 -->
+                        <div class="service-card service-card--small fade-in">
+                            <div class="service-card__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3 class="service-card__title" data-i18n="service3_title">Автоматизация и цифра</h3>
+                            <p class="service-card__desc" data-i18n="service3_desc">Подбор и внедрение инструментов для прозрачности бизнеса.</p>
+                        </div>
+                        
+                        <!-- Service 4 -->
+                        <div class="service-card service-card--small fade-in">
+                            <div class="service-card__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3 class="service-card__title" data-i18n="service4_title">Сопровождение</h3>
+                            <p class="service-card__desc" data-i18n="service4_desc">Постоянная поддержка на всех этапах реализации стратегии.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section process relative overflow-hidden">
+            <div class="section__glow section__glow--bottom-left"></div>
+            <div class="process__bg-pattern"></div>
+            <div class="process__blobs">
+                <div class="blob blob--1"></div>
+                <div class="blob blob--2"></div>
+            </div>
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title fade-in" data-i18n="process_title">Как мы работаем</h2>
+                    <p class="section-subtitle fade-in" data-i18n="process_subtitle">Последовательный подход к трансформации вашего бизнеса</p>
+                </div>
+                
+                <div class="process__grid">
+                    <div class="process__journey">
+                        <div class="journey-step fade-in">
+                            <div class="journey-step__header">
+                                <span class="journey-step__num">01</span>
+                                <div class="journey-step__line"></div>
+                            </div>
+                            <div class="journey-step__content">
+                                <h3 class="journey-step__title" data-i18n="process_step1_title">Первичная консультация</h3>
+                                <p class="journey-step__desc" data-i18n="process_step1_desc">Обсуждаем ваши задачи, текущие вызовы и определяем цели сотрудничества.</p>
+                            </div>
+                        </div>
+                        <div class="journey-step fade-in">
+                            <div class="journey-step__header">
+                                <span class="journey-step__num">02</span>
+                                <div class="journey-step__line"></div>
+                            </div>
+                            <div class="journey-step__content">
+                                <h3 class="journey-step__title" data-i18n="process_step2_title">Диагностика и аудит</h3>
+                                <p class="journey-step__desc" data-i18n="process_step2_desc">Проводим детальный анализ бизнеса для выявления реальных причин проблем.</p>
+                            </div>
+                        </div>
+                        <div class="journey-step fade-in">
+                            <div class="journey-step__header">
+                                <span class="journey-step__num">03</span>
+                                <div class="journey-step__line"></div>
+                            </div>
+                            <div class="journey-step__content">
+                                <h3 class="journey-step__title" data-i18n="process_step3_title">Разработка решений</h3>
+                                <p class="journey-step__desc" data-i18n="process_step3_desc">Формируем конкретную стратегию и план действий по оптимизации.</p>
+                            </div>
+                        </div>
+                        <div class="journey-step fade-in">
+                            <div class="journey-step__header">
+                                <span class="journey-step__num">04</span>
+                            </div>
+                            <div class="journey-step__content">
+                                <h3 class="journey-step__title" data-i18n="process_step4_title">Внедрение и контроль</h3>
+                                <p class="journey-step__desc" data-i18n="process_step4_desc">Сопровождаем процесс изменений и фиксируем достигнутые результаты.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process__visual fade-in">
+                        <div class="image-container image-container--process">
+                            <img src="./assets/how we work.png" alt="Рабочий процесс" class="process-image" referrerPolicy="no-referrer">
+                            <div class="process__visual-overlay">
+                                <div class="process__visual-badge">
+                                    <span class="badge-num">100%</span>
+                                    <span class="badge-txt">Контроль</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience Section -->
+        <section class="section target bg-surface relative overflow-hidden">
+            <div class="section__glow section__glow--center"></div>
+            <div class="target__bg-pattern"></div>
+            <div class="target__blobs">
+                <div class="blob blob--3"></div>
+                <div class="blob blob--4"></div>
+            </div>
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title fade-in" data-i18n="target_title">Для кого наши решения</h2>
+                    <p class="lead fade-in" data-i18n="target_subtitle">Мы помогаем компаниям на разных этапах зрелости — от амбициозных стартапов до устоявшихся производственных холдингов.</p>
+                </div>
+                
+                <div class="target__grid">
+                    <div class="target-card fade-in">
+                        <div class="target-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <h3 class="target-card__title" data-i18n="target1_title">Малый и средний бизнес</h3>
+                        <p class="target-card__desc" data-i18n="target1_desc">Помогаем перейти от хаотичного управления к системному подходу и подготовиться к масштабированию.</p>
+                    </div>
+                    
+                    <div class="target-card fade-in">
+                        <div class="target-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <h3 class="target-card__title" data-i18n="target2_title">Производственные компании</h3>
+                        <p class="target-card__desc" data-i18n="target2_desc">Оптимизация производственных циклов, снижение издержек и повышение качества продукции.</p>
+                    </div>
+                    
+                    <div class="target-card fade-in">
+                        <div class="target-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        </div>
+                        <h3 class="target-card__title" data-i18n="target3_title">Торговые компании</h3>
+                        <p class="target-card__desc" data-i18n="target3_desc">Настройка эффективного управления запасами, логистикой и внедрение прозрачной отчетности.</p>
+                    </div>
+                    
+                    <div class="target-card fade-in">
+                        <div class="target-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3 class="target-card__title" data-i18n="target4_title">Руководители и собственники</h3>
+                        <p class="target-card__desc" data-i18n="target4_desc">Предоставляем инструменты для принятия обоснованных управленческих решений на основе данных.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="section results bg-dark text-white relative overflow-hidden">
+            <div class="section__glow section__glow--top-left"></div>
+            <div class="section__glow section__glow--bottom-right"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title fade-in" data-i18n="results_title">Ценность для бизнеса</h2>
+                </div>
+                
+                <div class="results__dashboard">
+                    <div class="result-tile result-tile--main fade-in">
+                        <div class="result-tile__header">
+                            <span class="result-label" data-i18n="result1_label">Результат управления</span>
+                            <h3 class="result-tile__title" data-i18n="result1_title">Прозрачность процессов</h3>
+                        </div>
+                        <p class="result-tile__desc" data-i18n="result1_desc">Собственник получает полный контроль над происходящим в компании без необходимости микроменеджмента.</p>
+                    </div>
+                    
+                    <div class="result-tile fade-in">
+                        <div class="result-tile__header">
+                            <span class="result-label" data-i18n="result2_label">Финансовый результат</span>
+                            <h3 class="result-tile__title" data-i18n="result2_title">Снижение издержек</h3>
+                        </div>
+                        <p class="result-tile__desc" data-i18n="result2_desc">Выявление и устранение скрытых потерь в операционной деятельности.</p>
+                    </div>
+                    
+                    <div class="result-tile fade-in">
+                        <div class="result-tile__header">
+                            <span class="result-label" data-i18n="result3_label">Системный результат</span>
+                            <h3 class="result-tile__title" data-i18n="result3_title">Управляемость</h3>
+                        </div>
+                        <p class="result-tile__desc" data-i18n="result3_desc">Внедрение четких регламентов и KPI делает работу команды предсказуемой.</p>
+                    </div>
+                    
+                    <div class="result-tile result-tile--wide fade-in">
+                        <div class="result-tile__header">
+                            <span class="result-label" data-i18n="result4_label">Стратегический результат</span>
+                            <h3 class="result-tile__title" data-i18n="result4_title">Ускорение решений</h3>
+                        </div>
+                        <p class="result-tile__desc" data-i18n="result4_desc">Наличие актуальных данных и понятной стратегии позволяет бизнесу быстрее реагировать на изменения рынка и опережать конкурентов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section id="scenarios" class="section scenarios">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title fade-in" data-i18n="scenarios_title">Где применяются решения</h2>
+                    <p class="section-subtitle fade-in" data-i18n="scenarios_subtitle">Контексты, в которых наша экспертиза приносит наибольшую пользу</p>
+                </div>
+                
+                <div class="scenarios__grid">
+                    <div class="scenario-card fade-in">
+                        <img src="./assets/1.png" alt="Реорганизация управления" class="scenario-card__bg">
+                        <div class="scenario-card__overlay">
+                            <h3 class="scenario-card__title" data-i18n="scenario1_title">Реорганизация управления</h3>
+                            <p class="scenario-card__desc" data-i18n="scenario1_desc">Когда старые методы управления перестают работать при росте компании.</p>
+                        </div>
+                    </div>
+                    <div class="scenario-card fade-in">
+                        <img src="./assets/2.png" alt="Оптимизация производства" class="scenario-card__bg">
+                        <div class="scenario-card__overlay">
+                            <h3 class="scenario-card__title" data-i18n="scenario2_title">Оптимизация производства</h3>
+                            <p class="scenario-card__desc" data-i18n="scenario2_desc">При необходимости снижения себестоимости и повышения качества продукции.</p>
+                        </div>
+                    </div>
+                    <div class="scenario-card fade-in">
+                        <img src="./assets/3.png" alt="Подготовка к масштабированию" class="scenario-card__bg">
+                        <div class="scenario-card__overlay">
+                            <h3 class="scenario-card__title" data-i18n="scenario3_title">Подготовка к масштабированию</h3>
+                            <p class="scenario-card__desc" data-i18n="scenario3_desc">Создание фундамента для выхода на новые рынки или запуска филиалов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUUS Promo -->
+        <section id="equus" class="section equus-promo">
+            <div class="container">
+                <div class="equus-panel fade-in">
+                    <div class="equus-panel__content">
+                        <span class="eyebrow" data-i18n="equus_eyebrow">Техническая реализация</span>
+                        <h2 class="equus-panel__title" data-i18n="equus_title">EQUUS — Цифровое исполнение</h2>
+                        <p class="equus-panel__desc" data-i18n="equus_desc">EQUUS выступает как дополнительное направление реализации для проектов, требующих глубокой цифровой интеграции. Если ваша стратегия требует разработки сложных платформ или мобильных приложений, EQUUS обеспечит безупречное техническое исполнение.</p>
+                        <a href="https://equus.electrolab.kg" target="_blank" class="btn btn--primary" data-i18n="equus_cta">Перейти в EQUUS</a>
+                    </div>
+                    <div class="equus-panel__visual">
+                        <div class="image-container image-container--equus">
+                            <img src="./assets/equus_section.png" alt="EQUUS Цифровые продукты" class="equus-image" referrerPolicy="no-referrer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact bg-surface">
+            <div class="container contact__container">
+                <div class="contact__info">
+                    <h2 class="section-title fade-in" data-i18n="contact_title">Запрос на консультацию</h2>
+                    <p class="fade-in" data-i18n="contact_desc">Оставьте заявку для проведения первичного аудита ваших бизнес-задач. Мы свяжемся с вами, чтобы обсудить возможные точки роста вашего бизнеса.</p>
+                    
+                    <div class="contact__visual fade-in">
+                        <div class="image-container image-container--contact">
+                            <img src="./assets/form_section.png" alt="Связаться с нами" class="contact-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact__form-card fade-in">
+                    <form id="lead-form" class="form">
+                        <div class="form__group">
+                            <label for="name" class="form__label" data-i18n="form_label_name">Ваше имя</label>
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__label" data-i18n="form_label_phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" placeholder="+996 (___) __-__-__" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="company" class="form__label" data-i18n="form_label_company">Компания</label>
+                            <input type="text" id="company" name="company" class="form__input" placeholder="Название компании">
+                        </div>
+                        <div class="form__group">
+                            <label for="task" class="form__label" data-i18n="form_label_task">Описание задачи</label>
+                            <textarea id="task" name="task" class="form__textarea" placeholder="Кратко опишите ваш запрос" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="btn btn--primary btn--full">
+                            <span class="btn-text" data-i18n="form_submit">Отправить заявку</span>
+                            <span class="btn-loader hidden"></span>
+                        </button>
+                        
+                        <p class="form__privacy" data-i18n="form_privacy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+                    </form>
+                    
+                    <div id="form-success" class="form-message form-message--success hidden">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <h3 data-i18n="form_success_title">Заявка принята</h3>
+                        <p data-i18n="form_success_desc">Мы свяжемся с вами в ближайшее время для обсуждения вашего запроса.</p>
+                        <button class="btn btn--outline btn--small" onclick="resetFormUI()" data-i18n="form_reset">Отправить еще раз</button>
+                    </div>
+                    
+                    <div id="form-error" class="form-message form-message--error hidden">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        <h3 data-i18n="form_error_title">Ошибка отправки</h3>
+                        <p data-i18n="form_error_desc">К сожалению, произошла ошибка. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.</p>
+                        <button class="btn btn--outline btn--small" onclick="resetFormUI()" data-i18n="form_retry">Попробовать снова</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="logo-area">
+                        <img src="./assets/electrolab_favicon.png" alt="ELECTROLAB" class="logo-main">
+                    </div>
+                    <p class="footer__desc" data-i18n="footer_desc">Профессиональный консалтинг и оптимизация бизнеса. Более 15 лет помогаем компаниям расти эффективно.</p>
+                </div>
+                
+                <div class="footer__nav">
+                    <h4 class="footer__title" data-i18n="footer_nav_title">Навигация</h4>
+                    <ul class="footer__list">
+                        <li><a href="#about" data-i18n="footer_nav_about">О компании</a></li>
+                        <li><a href="#services" data-i18n="footer_nav_services">Услуги</a></li>
+                        <li><a href="#process" data-i18n="footer_nav_process">Процесс</a></li>
+                        <li><a href="#results" data-i18n="footer_nav_results">Результаты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contacts">
+                    <h4 class="footer__title" data-i18n="footer_contact_title">Связь</h4>
+                    <ul class="footer__list">
+                        <li><a href="mailto:info@electrolab.kg">info@electrolab.kg</a></li>
+                        <li><a href="tel:+996555666005">+996 (555) 66-60-05</a></li>
+                        <li><a href="https://wa.me/996555666005" target="_blank" data-i18n="footer_whatsapp">WhatsApp</a></li>
+                        <li><a href="https://t.me/adkham_u" target="_blank" data-i18n="footer_telegram">Telegram</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__title" data-i18n="footer_projects_title">Проекты</h4>
+                    <ul class="footer__list">
+                        <li><a href="https://equus.electrolab.kg" target="_blank">EQUUS</a></li>
+                        <li><a href="#" data-i18n="footer_privacy">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p data-i18n="footer_copy">&copy; 2026 ELECTROLAB. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
