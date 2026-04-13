@@ -31,7 +31,7 @@
     --grad-radial: radial-gradient(circle, rgba(94,90,247,0.15) 0%, rgba(53,168,216,0.08) 45%, rgba(33,199,168,0.05) 100%);
     
     /* Spacing & Layout */
-    --container-max: 1720px;
+    --container-max: 1360px;
     --section-padding: 160px;
     --gap-xl: 100px;
     --gap-lg: 48px;
@@ -1586,4 +1586,17 @@ html[data-theme="dark"] .brand__name {
   font-size: clamp(36px, 4vw, 56px);
   line-height: 1.05;
   text-align: center;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.site-shell,
+main,
+section {
+  max-width: 100%;
+  overflow-x: clip;
 }
