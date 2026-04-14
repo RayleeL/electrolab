@@ -1590,8 +1590,8 @@ html[data-theme="dark"] .brand__name {
 }
 
 /* =========================================
-   CLEAN RESPONSIVE OVERRIDES
-   замена строк 1592–2368
+   CLEAN LAYOUT + RESPONSIVE
+   заменить строки 1592–2369
    ========================================= */
 
 html,
@@ -1620,71 +1620,40 @@ main {
     overflow-x: clip;
 }
 
-/* Базовая ширина контейнера */
+/* -------------------------
+   Desktop polish
+   ------------------------- */
 .container {
-    width: min(1240px, calc(100% - 64px));
+    width: min(1180px, calc(100% - 72px));
     max-width: none;
     margin: 0 auto;
     padding: 0;
 }
 
-/* Чуть спокойнее desktop/tablet */
-.header__container,
-.hero__container {
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
-}
-
-.hero__container {
-    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-    gap: 56px;
-    align-items: center;
-}
-
-.hero__content {
-    max-width: 680px;
-    min-width: 0;
-}
-
-.hero__title {
-    font-size: clamp(46px, 5.8vw, 72px);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
-    max-width: 680px;
-}
-
-.hero__desc {
-    max-width: 620px;
-}
-
-.image-container--hero {
-    width: 100%;
-    max-width: 560px;
-    min-height: 0;
-    height: auto;
-    aspect-ratio: 4 / 5;
-    margin-left: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.image-container--hero img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .header__container {
-    gap: 20px;
-    height: 92px;
+    height: 88px;
+    gap: 16px;
+}
+
+.header--scrolled .header__container {
+    height: 74px;
 }
 
 .logo-area {
     gap: 12px;
     min-width: 0;
+}
+
+.logo-main,
+.brand__logo {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+}
+
+.brand__name {
+    font-size: 18px;
+    white-space: nowrap;
 }
 
 .nav {
@@ -1695,19 +1664,134 @@ main {
 }
 
 .nav__list {
-    gap: clamp(24px, 2.4vw, 44px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 2vw, 34px);
     flex-wrap: nowrap;
 }
 
+.nav__link {
+    white-space: nowrap;
+    font-size: 15px;
+}
+
 .header__actions {
-    gap: 14px;
+    gap: 12px;
     flex-shrink: 0;
 }
 
-/* =========================
-   TABLET
-   ========================= */
-@media (max-width: 1024px) {
+.theme-toggle,
+.lang-toggle {
+    width: 44px;
+    height: 44px;
+}
+
+.hero {
+    min-height: 100svh;
+    padding: 118px 0 72px;
+}
+
+.hero__container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 0.84fr);
+    gap: clamp(28px, 3vw, 44px);
+    align-items: center;
+}
+
+.hero__content {
+    max-width: 620px;
+    min-width: 0;
+    align-self: center;
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+}
+
+.hero__title {
+    font-size: clamp(44px, 5vw, 64px);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    margin-bottom: 22px;
+    max-width: 620px;
+}
+
+.hero__desc {
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.55;
+    margin-bottom: 32px;
+    max-width: 560px;
+}
+
+.hero__btns {
+    gap: 14px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.hero__metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.metric-item {
+    min-width: 120px;
+}
+
+.metric-val {
+    font-size: clamp(28px, 2.5vw, 38px);
+    line-height: 1;
+}
+
+.metric-txt {
+    margin-top: 6px;
+    line-height: 1.35;
+}
+
+.image-container--hero {
+    width: 100%;
+    max-width: 500px;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08);
+}
+
+.image-container--hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__glow {
+    width: 720px;
+    height: 720px;
+    filter: blur(120px);
+}
+
+.hero__glow--lilac {
+    top: -220px;
+    right: -180px;
+}
+
+.hero__glow--cyan {
+    bottom: -220px;
+    left: -180px;
+}
+
+/* -------------------------
+   Tablet
+   ------------------------- */
+@media (max-width: 1100px) {
     :root {
         --section-padding: 104px;
     }
@@ -1717,25 +1801,27 @@ main {
     }
 
     .header__container {
-        height: 84px;
-        gap: 16px;
+        height: 82px;
+        gap: 14px;
     }
 
-    .logo-main {
-        height: 44px;
+    .logo-main,
+    .brand__logo {
+        width: 42px;
+        height: 42px;
     }
 
     .brand__name {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .nav__list {
-        gap: 24px;
+        gap: 20px;
     }
 
     .hero {
         min-height: auto;
-        padding: 128px 0 64px;
+        padding: 116px 0 60px;
     }
 
     .hero__container,
@@ -1744,47 +1830,44 @@ main {
     .contact__container,
     .process__grid {
         grid-template-columns: 1fr;
-        gap: 56px;
+        gap: 48px;
     }
 
     .hero__content {
         order: 1;
-        text-align: left;
         max-width: 100%;
+        text-align: left;
     }
 
     .hero__visual {
         order: 2;
-        max-width: 560px;
-        margin: 0 auto;
         width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
     }
 
     .hero__title {
-        font-size: clamp(42px, 6vw, 60px);
+        font-size: clamp(40px, 6vw, 56px);
         max-width: 100%;
     }
 
     .hero__desc {
-        font-size: 18px;
         max-width: 720px;
-        margin-left: 0;
-        margin-right: 0;
+        font-size: 18px;
     }
 
     .hero__btns {
-        margin-bottom: 40px;
+        margin-bottom: 32px;
     }
 
     .hero__metrics {
-        gap: 24px;
         justify-content: flex-start;
     }
 
     .image-container--hero {
-        max-width: 560px;
+        max-width: 520px;
         margin: 0 auto;
-        aspect-ratio: 4 / 4.8;
+        aspect-ratio: 4 / 4.7;
     }
 
     .about__visual,
@@ -1795,12 +1878,7 @@ main {
     }
 
     .equus-panel {
-        padding: 72px 32px;
-        text-align: left;
-    }
-
-    .equus-panel__visual {
-        order: 2;
+        padding: 64px 32px;
     }
 
     .services__bento {
@@ -1826,9 +1904,9 @@ main {
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* -------------------------
+   Mobile
+   ------------------------- */
 @media (max-width: 768px) {
     :root {
         --section-padding: 88px;
@@ -1839,9 +1917,9 @@ main {
     }
 
     .header__container {
-        height: 76px;
+        height: 72px;
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto auto auto;
+        grid-template-columns: minmax(0, 1fr) 36px 36px 36px;
         align-items: center;
         gap: 8px;
     }
@@ -1849,18 +1927,17 @@ main {
     .logo-area {
         min-width: 0;
         overflow: hidden;
-        gap: 10px;
+        gap: 8px;
     }
 
     .logo-main,
     .brand__logo {
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
+        width: 34px;
+        height: 34px;
     }
 
     .brand__name {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1;
         white-space: nowrap;
         overflow: hidden;
@@ -1873,8 +1950,8 @@ main {
 
     .menu-toggle {
         display: flex;
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         align-items: center;
         justify-content: center;
         padding: 0;
@@ -1883,8 +1960,8 @@ main {
 
     .theme-toggle,
     .lang-toggle {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         flex-shrink: 0;
     }
 
@@ -1895,11 +1972,11 @@ main {
 
     .nav {
         position: fixed;
-        top: 76px;
+        top: 72px;
         left: 0;
         width: 100%;
         background: var(--surface);
-        padding: 28px 16px;
+        padding: 24px 16px;
         border-bottom: 1px solid var(--border);
         transform: translateY(-130%);
         transition: var(--transition);
@@ -1914,17 +1991,17 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 28px;
+        gap: 24px;
     }
 
     .hero {
         min-height: auto;
-        padding: 100px 0 48px;
+        padding: 92px 0 40px;
     }
 
     .hero__container {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 22px;
         align-items: start;
     }
 
@@ -1937,28 +2014,28 @@ main {
     .hero__visual {
         order: 2;
         width: 100%;
-        max-width: 100%;
-        margin: 0;
+        max-width: 360px;
+        margin: 0 auto;
     }
 
     .eyebrow {
         font-size: 11px;
         letter-spacing: 0.12em;
-        margin-bottom: 14px;
-        line-height: 1.5;
+        line-height: 1.45;
+        margin-bottom: 12px;
     }
 
     .hero__title {
-        font-size: clamp(34px, 10vw, 46px);
+        font-size: clamp(32px, 10vw, 44px);
         line-height: 0.98;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
         max-width: 100%;
     }
 
     .hero__desc {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.55;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         max-width: 100%;
     }
 
@@ -1966,7 +2043,7 @@ main {
         flex-direction: column;
         align-items: stretch;
         gap: 12px;
-        margin-bottom: 28px;
+        margin-bottom: 24px;
     }
 
     .hero__btns .btn {
@@ -1975,8 +2052,8 @@ main {
 
     .hero__metrics {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
 
     .metric-item {
@@ -1984,7 +2061,7 @@ main {
     }
 
     .metric-val {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .metric-txt {
@@ -1993,11 +2070,11 @@ main {
     }
 
     .image-container--hero {
-        max-width: 100%;
         width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
         aspect-ratio: 4 / 4.8;
-        margin: 0;
-        border-radius: 20px;
+        border-radius: 18px;
     }
 
     .image-container--about,
@@ -2149,51 +2226,47 @@ main {
     }
 }
 
-/* =========================
-   SMALL MOBILE
-   ========================= */
-@media (max-width: 480px) {
+/* -------------------------
+   Very small mobile
+   ------------------------- */
+@media (max-width: 420px) {
     .container {
         width: calc(100% - 20px);
     }
 
     .header__container {
-        grid-template-columns: minmax(0, 1fr) auto auto auto;
+        grid-template-columns: minmax(0, 1fr) 34px 34px 34px;
         gap: 6px;
     }
 
     .logo-main,
     .brand__logo {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
     }
 
     .brand__name {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .theme-toggle,
     .lang-toggle,
     .menu-toggle {
-        width: 38px;
-        height: 38px;
+        width: 34px;
+        height: 34px;
     }
 
     .hero {
-        padding: 92px 0 40px;
+        padding: 88px 0 36px;
     }
 
     .hero__title {
         font-size: clamp(30px, 10vw, 40px);
     }
 
-    .hero__metrics {
-        grid-template-columns: 1fr;
-    }
-
     .btn {
-        min-height: 52px;
-        padding: 14px 20px;
+        min-height: 50px;
+        padding: 14px 18px;
         font-size: 15px;
     }
 
